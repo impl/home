@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <typeId id="DocBook" uri="site-schemas/docbook/4/docbook.rnc" />
+  <!--<typeId id="DocBook" uri="site-schemas/docbook/5/docbookxi.rnc" />-->
+</locatingRules>
