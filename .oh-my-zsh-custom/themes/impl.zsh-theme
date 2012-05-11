@@ -63,8 +63,8 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
 
     ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}➠%{$reset_color%} %{$fg[cyan]%}"
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-    ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$fg[blue]%}✓%{$reset_color%}"
-    ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} %{$fg[red]%}✗%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} %{$fg[blue]%}✓%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$fg[red]%}✗%{$reset_color%}"
 
     RPROMPT='${return_code}${background_jobs}$(git_prompt_status)%{$reset_color%}'
 
@@ -83,8 +83,8 @@ else
 
     ZSH_THEME_GIT_PROMPT_PREFIX=" ➠ "
     ZSH_THEME_GIT_PROMPT_SUFFIX=""
-    ZSH_THEME_GIT_PROMPT_DIRTY=" ✓"
-    ZSH_THEME_GIT_PROMPT_CLEAN=" ✗"
+    ZSH_THEME_GIT_PROMPT_CLEAN=" ✓"
+    ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
 
     RPROMPT='${return_code}${background_jobs}$(git_prompt_status)'
 
