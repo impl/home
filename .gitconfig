@@ -1,3 +1,15 @@
 [user]
 	name = Noah Fontes
 	email = nfontes@cynigram.com
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+	df = diff
+	who = shortlog -s --
+	slog = log --graph --date=local --abbrev-commit --pretty='%Cred%h %Cblue%p %Creset... %Cgreen%aN %Cresetcommitted %Cgreen%ar%Creset: %s'
