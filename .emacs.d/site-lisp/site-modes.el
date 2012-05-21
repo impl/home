@@ -182,6 +182,9 @@
   '(progn
      (define-key scala-mode-map [f1] nil)))
 
+(autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests." t)
+(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+
 ;; Automatic completion of input
 (require 'popup)
 (require 'fuzzy)
