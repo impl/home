@@ -26,14 +26,16 @@ add-zsh-hook precmd impl_theme_precmd
 emacs_prompt=
 case "$TERM" in
     eterm|eterm-*)
+        machine='%M'
         ssh_port=
         if [ ! -z "${SSH_CONNECTION}" ]; then
+            machine="${SSH_CONNECTION[(w)-2]}"
             ssh_port="#${SSH_CONNECTION[(w)-1]}"
         fi
 
         impl_theme_emacs_precmd() {
             emacs_prompt="%{"$'\eAnSiTu'"%}%n%{"$'\0'"%}"
-            emacs_prompt+="%{"$'\eAnSiTh'"%}%M${ssh_port}%{"$'\0'"%}"
+            emacs_prompt+="%{"$'\eAnSiTh'"%}${machine}${ssh_port}%{"$'\0'"%}"
             emacs_prompt+="%{"$'\eAnSiTc'"%}%d%{"$'\0'"%}"
         }
 
