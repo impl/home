@@ -11,8 +11,8 @@ impl_theme_precmd() {
     done
 
     if [[ $TERM != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
-        background_jobs=${(ej:%{${reset_color}%} %{${fg[magenta]}%}:)background_jobs}
-        background_jobs=${background_jobs:+" %{$fg[magenta]%}${background_jobs} ⚡%{$reset_color%}"}
+        background_jobs=${(ej:%{${reset_color}%} %{${FG[138]}%}:)background_jobs}
+        background_jobs=${background_jobs:+" %{$FG[138]%}${background_jobs} ⚡%{$reset_color%}"}
     else
         background_jobs=${(j:,:)background_jobs}
         background_jobs=${background_jobs:+" ${background_jobs} ⚡"}
@@ -47,7 +47,7 @@ case "$USERNAME" in
         ;;
     *)
         if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
-            rendered_username="%{$bold_color%}%{$fg[yellow]%}(%n)%{$reset_color%}"
+            rendered_username="%{$bold_color%}%{$FG[230]%}(%n)%{$reset_color%}"
         else
             rendered_username="(%n)"
         fi
@@ -56,24 +56,24 @@ esac
 
 if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
     # Display exit code when necessary
-    return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+    return_code="%(?..%{$FG[161]%}%? ↵%{$reset_color%})"
 
-    PROMPT='%{$fg[yellow]%}➠%{$reset_color%} %{$bold_color%}%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)${emacs_prompt}
-%(!.%{$bold_color%}%{$fg[red]%}.%{$fg[green]%})%m%{$reset_color%}${rendered_username} %(!.%{$bold_color%}%{$fg[red]%}.%{$fg[yellow]%})%#%{$reset_color%} '
+    PROMPT='%{$FG[230]%}➠%{$reset_color%} %{$bold_color%}%{$FG[037]%}%~%{$reset_color%}$(git_prompt_info)${emacs_prompt}
+%(!.%{$bold_color%}%{$FG[161]%}.%{$FG[120]%})%m%{$reset_color%}${rendered_username} %(!.%{$bold_color%}%{$FG[161]%}.%{$FG[230]%})%#%{$reset_color%} '
 
-    ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[yellow]%}➠%{$reset_color%} %{$fg[cyan]%}"
+    ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[230]%}➠%{$reset_color%} %{$FG[077]%}"
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-    ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} %{$fg[blue]%}✓%{$reset_color%}"
-    ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$fg[red]%}✗%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} %{$FG[037]%}✓%{$reset_color%}"
+    ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$FG[161]%}✗%{$reset_color%}"
 
     RPROMPT='${return_code}${background_jobs}$(git_prompt_status)%{$reset_color%}'
 
-    ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} ✚"
-    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} ✹"
-    ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} ✖"
-    ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} ➜"
-    ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} ═"
-    ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
+    ZSH_THEME_GIT_PROMPT_ADDED="%{$FG[120]%} ✚"
+    ZSH_THEME_GIT_PROMPT_MODIFIED="%{$FG[037]%} ✹"
+    ZSH_THEME_GIT_PROMPT_DELETED="%{$FG[161]%} ✖"
+    ZSH_THEME_GIT_PROMPT_RENAMED="%{$FG[138]%} ➜"
+    ZSH_THEME_GIT_PROMPT_UNMERGED="%{$FG[230]%} ═"
+    ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[077]%} ✭"
 else
     # Display exit code when necessary
     return_code="%(?..%? ↵)"

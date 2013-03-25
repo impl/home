@@ -1,8 +1,8 @@
 # This is how one can set a reattach password:
 # password ODSJQf.4IJN7E    # "1234"
 
-# no annoying audible bell, please
-vbell on
+# annoying audible bell, please; we'll map it to something nicer in our terminal emulator
+vbell off
 
 # detach on hangup
 autodetach on
@@ -67,6 +67,11 @@ termcapinfo xterm 'vi=\E[?25l:ve=\E[34h\E[?25h:vs=\E[34l'
 
 # emulate part of the 'K' charset
 termcapinfo   xterm 'XC=K%,%\E(B,[\304,\\\\\326,]\334,{\344,|\366,}\374,~\337'
+
+#attrcolor b ".I"
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+term screen-256color-bce
 
 # xterm-52 tweaks:
 # - uses background color for delete operations
