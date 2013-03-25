@@ -67,6 +67,9 @@
 ;; Disable backup files
 (setq make-backup-files nil)
 
+;; Make sure org-mode is loaded
+(require 'org)
+
 ;; Replace emacs's default undo-mode with undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode)
@@ -199,3 +202,6 @@
 (define-key ac-menu-map (kbd "<up>") 'ac-previous)
 
 (setq ac-use-quick-help nil)
+
+;; File annotations
+(require 'org-annotate-file)

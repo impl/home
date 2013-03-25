@@ -51,3 +51,6 @@
 
 ;; Enter should indent as well
 (global-set-key [?\r] 'newline-and-indent)
+
+;; Fancy shortcut for file annotations
+(global-set-key (kbd "C-c C-l") 'org-annotate-file)
