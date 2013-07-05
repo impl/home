@@ -14,8 +14,8 @@
 (set-face-foreground 'isearch "grey20")
 (set-face-background 'isearch "#AFB4C4")
 
-(set-face-foreground 'modeline "grey20")
-(set-face-background 'modeline "#ECEDEE")
+(set-face-foreground 'mode-line "grey20")
+(set-face-background 'mode-line "#ECEDEE")
 
 (set-face-foreground 'highlight "grey20")
 (set-face-background 'highlight "#AFB4C4")

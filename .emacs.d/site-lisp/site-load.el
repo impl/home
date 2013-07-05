@@ -7,3 +7,8 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
+;; Packages we always want installed
+(dolist (package '(popup fuzzy auto-complete gist gh php-mode scss-mode))
+  (unless (package-installed-p package)
+    (package-install package)))
