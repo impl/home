@@ -114,7 +114,7 @@
 
 (add-hook 'after-make-frame-functions
           '(lambda (frame)
-             (select-frame frame)
+             (select-frame-set-input-focus frame)
              (when (window-system frame)
                (nf-apply-window-system-faces frame))))
 

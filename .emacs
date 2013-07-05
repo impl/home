@@ -1,6 +1,3 @@
-;; Run a server instance (if we aren't already)
-(server-start)
-
 ;; Am I speedycat?
 (modify-frame-parameters nil '((wait-for-wm . nil)))
 
