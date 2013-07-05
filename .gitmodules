@@ -1,3 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh
+[submodule ".oh-my-zsh-custom/plugins/virtualenv-prompt"]
+	path = .oh-my-zsh-custom/plugins/virtualenv-prompt
+	url = git://github.com/tonyseek/oh-my-zsh-virtualenv-prompt.git
