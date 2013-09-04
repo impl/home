@@ -29,6 +29,9 @@ let mapleader = ","
 " color scheme & syntax highlighting 
 "-------------------------------------------------------------------------------
 
+" CSApprox can shut up
+let g:CSApprox_verbose_level = 0
+
 set background=dark
 colorscheme base16-default
 syntax on
