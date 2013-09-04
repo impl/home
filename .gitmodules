@@ -4,3 +4,45 @@
 [submodule ".oh-my-zsh-custom/plugins/virtualenv-prompt"]
 	path = .oh-my-zsh-custom/plugins/virtualenv-prompt
 	url = git://github.com/tonyseek/oh-my-zsh-virtualenv-prompt.git
+[submodule ".vim/vendor/pathogen"]
+	path = .vim/vendor/pathogen
+	url = git://github.com/tpope/vim-pathogen
+[submodule ".vim/bundle/base16-vim"]
+	path = .vim/bundle/base16-vim
+	url = git://github.com/chriskempson/base16-vim.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/tcomment_vim"]
+	path = .vim/bundle/tcomment_vim
+	url = git://github.com/tomtom/tcomment_vim.git
+[submodule ".vim/bundle/csapprox"]
+	path = .vim/bundle/csapprox
+	url = git://github.com/godlygeek/csapprox.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim
+[submodule ".vim/bundle/ZoomWin"]
+	path = .vim/bundle/ZoomWin
+	url = git://github.com/vim-scripts/ZoomWin
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = git://github.com/rking/ag.vim
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule ".vim/bundle/argtextobj.vim"]
+	path = .vim/bundle/argtextobj.vim
+	url = git://github.com/vim-scripts/argtextobj.vim
+[submodule ".vim/bundle/vim-indent-object"]
+	path = .vim/bundle/vim-indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object.git
