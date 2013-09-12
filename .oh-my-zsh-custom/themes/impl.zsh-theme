@@ -60,13 +60,18 @@ if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
     # Display exit code when necessary
     return_code="%(?..%{$FG[161]%}%? ↵%{$reset_color%})"
 
-    PROMPT='%{$FG[230]%}➠%{$reset_color%} %{$bold_color%}%{$FG[037]%}%~%{$reset_color%}$(git_prompt_info)$(virtualenv_prompt_info)${emacs_prompt}
+    PROMPT='%{$FG[230]%}➠%{$reset_color%} %{$bold_color%}%{$FG[037]%}%~%{$reset_color%}$(git_prompt_info)$(hg_prompt_info)$(virtualenv_prompt_info)${emacs_prompt}
 %(!.%{$bold_color%}%{$FG[161]%}.%{$FG[120]%})%m%{$reset_color%}${rendered_username} %(!.%{$bold_color%}%{$FG[161]%}.%{$FG[230]%})%#%{$reset_color%} '
 
     ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[230]%}➠ git%{$reset_color%}%{$FG[230]%}/%{$reset_color%}%{$FG[077]%}"
     ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
     ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} %{$FG[037]%}✓%{$reset_color%}"
     ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%} %{$FG[161]%}✗%{$reset_color%}"
+
+    ZSH_THEME_HG_PROMPT_PREFIX=" %{$FG[230]%}➠ hg%{$reset_color%}%{$FG[230]%}/%{$reset_color%}%{$FG[077]%}"
+    ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+    ZSH_THEME_HG_PROMPT_CLEAN="%{$reset_color%} %{$FG[037]%}✓%{$reset_color%}"
+    ZSH_THEME_HG_PROMPT_DIRTY="%{$reset_color%} %{$FG[161]%}✗%{$reset_color%}"
 
     ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX=" %{$FG[230]%}➠ venv/%{$reset_color%}%{$FG[077]%}"
     ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX="%{$reset_color%}"
@@ -90,6 +95,11 @@ else
     ZSH_THEME_GIT_PROMPT_SUFFIX=""
     ZSH_THEME_GIT_PROMPT_CLEAN=" ✓"
     ZSH_THEME_GIT_PROMPT_DIRTY=" ✗"
+
+    ZSH_THEME_HG_PROMPT_PREFIX=" ➠ hg/"
+    ZSH_THEME_HG_PROMPT_SUFFIX=""
+    ZSH_THEME_HG_PROMPT_CLEAN=" ✓"
+    ZSH_THEME_HG_PROMPT_DIRTY=" ✗"
 
     ZSH_THEME_VIRTUAL_ENV_PROMPT_PREFIX=" ➠ venv/"
     ZSH_THEME_VIRTUAL_ENV_PROMPT_SUFFIX=""

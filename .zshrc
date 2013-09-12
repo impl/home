@@ -11,7 +11,7 @@ ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom"
 DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=( git virtualenv-prompt history-substring-search )
+plugins=( git mercurial virtualenv-prompt history-substring-search )
 source "${ZSH}/oh-my-zsh.sh"
 
 # We load our theme manually because the current script doesn't pull it out of
