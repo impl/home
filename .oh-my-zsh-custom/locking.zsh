@@ -1,0 +1,1 @@
+setopt HIST_FCNTL_LOCK
