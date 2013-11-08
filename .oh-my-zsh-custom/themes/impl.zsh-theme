@@ -1,6 +1,25 @@
 #! /usr/bin/env zsh -f
 # -*- mode: sh -*-
 
+# The Mercurial prompt rendering function can be absurdly slow.
+# This is because `hg status` takes forever.
+eval "_$( whence -f hg_dirty )"
+__hg_dirty=
+impl_hg_dirty () {
+    local timing
+
+    {
+        read # Skip the first line.
+        read timing
+        IFS= read -rd '' __hg_dirty
+    } < <( __hg_dirty_buf="$( _hg_dirty )"; times; echo "${__hg_dirty_buf}" )
+
+    [[ "$( echo "${timing}" | awk 'BEGIN { FS="[ ms]" } { print ($1*60+$2)+($4*60+$5) }' )" > 0.25 ]] && {
+        impl_hg_dirty() { }
+        __hg_dirty=
+    }
+}
+
 # Find out background jobs
 impl_theme_precmd() {
     background_jobs=()
@@ -17,6 +36,10 @@ impl_theme_precmd() {
         background_jobs=${(j:,:)background_jobs}
         background_jobs=${background_jobs:+" ${background_jobs} ⚡"}
     fi
+
+    # Fixup hg_dirty.
+    impl_hg_dirty
+    function hg_dirty () { echo "${__hg_dirty}" }
 }
 
 autoload -U add-zsh-hook
