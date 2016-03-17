@@ -86,7 +86,7 @@ set backspace=indent,eol,start
 " ctrlp
 """"""""
 " open buffer list on
-nnoremap <c-b> :ctrlpbuffer<cr>
+nnoremap <c-b> :CtrlPBuffer<cr>
 " clear ctrlp cache then open ctrlp
 nnoremap <silent> <c-l> :clearctrlpcache<cr>\|:ctrlp<cr>
 " search .* files/folders
@@ -139,6 +139,27 @@ nmap <leader>a: :tabularize /:\s*\zs/l0r1<cr>
 vmap <leader>a: :tabularize /:\s*\zs/l0r1<cr>
 nmap <leader>ap :tabularize /import<cr>
 vmap <leader>ap :tabularize /import<cr>
+
+
+" jsx
+""""""
+let g:jsx_ext_required = 0
+
+
+" syntastic
+""""""""""""
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_error_symbol = "✖"
+let g:syntastic_style_error_symbol = "❃"
+let g:syntastic_warning_symbol = "❗"
+let g:syntastic_style_warning_symbol = "❗"
 
 
 "-------------------------------------------------------------------------------

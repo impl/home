@@ -12,4 +12,4 @@
 	co = checkout
 	df = diff
 	who = shortlog -s --
-	slog = log --graph --date=local --abbrev-commit --pretty='%Cred%h %Cblue%p %Creset... %Cgreen%aN %Cresetcommitted %Cgreen%ar%Creset: %s'
+	slog = log --graph --date=local --abbrev-commit --pretty='%Cred%h %Cblue%p %Creset— %Cgreen%aN %Cresetcommitted %Cgreen%ar%Creset: %s'
